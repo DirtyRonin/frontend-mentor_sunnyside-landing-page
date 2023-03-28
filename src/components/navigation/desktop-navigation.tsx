@@ -18,7 +18,7 @@ export function DesktopNavigation() {
             </li>
           </ul>
         </div>
-        <button className="text-black bg-white px-6 rounded-[5rem]">
+        <button className="text-black bg-white px-6 rounded-[5rem] active:text-white active:bg-sky-300">
           <p className="uppercase text-sm">contact</p>
         </button>
       </div>

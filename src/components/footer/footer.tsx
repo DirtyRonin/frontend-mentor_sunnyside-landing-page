@@ -5,6 +5,9 @@ import { ReactComponent as Pinterest } from '../../project/images/icon-pinterest
 import { ReactComponent as Twitter } from '../../project/images/icon-twitter.svg';
 
 export function Footer() {
+  const menuOptions = ['About', 'Services', 'Projects'] as const;
+  const socialOptions = [<Facebook />, <Instagram />, <Twitter />, <Pinterest />] as const;
+
   return (
     <div className="text-dark-desaturated-cyan text-center font-[Barlow] bg-[hsl(168_44%_71%)]">
       <div className="flex items-center justify-center pt-12">
@@ -12,25 +15,20 @@ export function Footer() {
       </div>
       <div className="flex justify-center pt-8 text-[hsl(168_40%_40%)]">
         <ul>
-          <li className="float-left p-4">About</li>
-          <li className="float-left p-4">Services</li>
-          <li className="float-left p-4">Projects</li>
+          {menuOptions.map((x) => (
+            <li key={`footer-${x}`} className="float-left p-4 active:text-white cursor-pointer">
+              {x}
+            </li>
+          ))}
         </ul>
       </div>
-      <div className="flex justify-center pt-16 pb-[75px]">
+      <div className="flex justify-center pt-16 pb-[75px] text-[hsl(167_40%_30%)] ">
         <ul>
-          <li className="float-left px-3">
-            <Facebook className="text-[hsl(167_40%_30%)]" />
-          </li>
-          <li className="float-left px-3">
-            <Instagram className="text-[hsl(167_40%_30%)]" />
-          </li>
-          <li className="float-left px-3">
-            <Twitter className="text-[hsl(167_40%_30%)]" />
-          </li>
-          <li className="float-left px-3">
-            <Pinterest className="text-[hsl(167_40%_30%)]" />
-          </li>
+          {socialOptions.map((x, index) => (
+            <li key={`footer-social-${index}`} className="float-left px-3  active:text-white cursor-pointer">
+              {x}
+            </li>
+          ))}
         </ul>
       </div>
     </div>

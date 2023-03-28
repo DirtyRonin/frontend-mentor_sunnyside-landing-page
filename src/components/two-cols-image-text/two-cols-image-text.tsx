@@ -1,3 +1,4 @@
+import React from 'react';
 import { ImageCol } from '../image-col';
 
 interface TwoColsImageTextProps {
@@ -5,11 +6,24 @@ interface TwoColsImageTextProps {
   description: string;
   imageUrlMobile: string;
   imageUrlDesktop: string;
-  borderColor: string;
+  linkColor: 'yellow' | 'soft-red';
   reverse?: boolean;
 }
 
-export function TwoColsImageText({ title, description, imageUrlMobile, imageUrlDesktop, borderColor: linkColor, reverse = false }: TwoColsImageTextProps) {
+export function TwoColsImageText({ title, description, imageUrlMobile, imageUrlDesktop, linkColor: linkColor, reverse = false }: TwoColsImageTextProps) {
+  const [isActive, setActive] = React.useState(false);
+
+  const getLinkColor = (color: 'yellow' | 'soft-red') => {
+    switch (color) {
+      case 'yellow':
+        return { color: 'border-yellow-light', active: 'border-yellow' };
+      case 'soft-red':
+        return { color: 'border-soft-red-light', active: 'border-soft-red' };
+      default:
+        return { color: '', active: '' };
+    }
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 ">
       <ImageCol imageUrlDesktop={imageUrlDesktop} imageUrlMobile={imageUrlMobile} />
@@ -19,9 +33,11 @@ export function TwoColsImageText({ title, description, imageUrlMobile, imageUrlD
         <h2 className="text-[1.8rem] font-black leading-8">{title}</h2>
         <p className="font-[Barlow] text-dark-grayish-blue text-[.97rem] leading-[1.65rem]">{description}</p>
         <div>
-          <button className="relative">
-            <p className="uppercase text-[.85rem] font-black px-2 letter tracking-widest">learn more</p>
-            <div className={`absolute w-full border-[5px] rounded bottom-0 z-[-1000] ${linkColor}`}> </div>
+          <button className="" onMouseDown={() => setActive(true)} onMouseUp={() => setActive(false)}>
+            <p className="uppercase text-[.85rem] font-black px-2 letter tracking-widest z-[2000]">learn more</p>
+            <div
+              className={`mt-[-14px] w-full border-[5px] rounded bottom-0 z-[1] ${isActive ? getLinkColor(linkColor).active : getLinkColor(linkColor).color}`}
+            ></div>
           </button>
         </div>
       </div>

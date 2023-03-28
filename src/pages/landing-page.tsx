@@ -15,7 +15,7 @@ export function LandingPage() {
           marketing for you."
           imageUrlDesktop="img/desktop/image-transform.jpg"
           imageUrlMobile="img/mobile/image-transform.jpg"
-          borderColor="border-yellow"
+          linkColor="yellow"
           reverse={true}
         />
         <TwoColsImageText
@@ -23,7 +23,7 @@ export function LandingPage() {
           description="Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. "
           imageUrlDesktop="img/desktop/image-stand-out.jpg"
           imageUrlMobile="img/mobile/image-stand-out.jpg"
-          borderColor="border-soft-red"
+          linkColor="soft-red"
           reverse={false}
         />
       </section>
