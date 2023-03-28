@@ -6,13 +6,14 @@ interface TwoColsImageTextProps {
   imageUrlMobile: string;
   imageUrlDesktop: string;
   borderColor: string;
+  reverse?: boolean;
 }
 
-export function TwoColsImageText({ title, description, imageUrlMobile, imageUrlDesktop, borderColor: linkColor }: TwoColsImageTextProps) {
+export function TwoColsImageText({ title, description, imageUrlMobile, imageUrlDesktop, borderColor: linkColor, reverse = false }: TwoColsImageTextProps) {
   return (
-    <>
+    <div className="grid grid-cols-1 md:grid-cols-2 ">
       <ImageCol imageUrlDesktop={imageUrlDesktop} imageUrlMobile={imageUrlMobile} />
-      <div className="flex flex-col text-center px-7 py-[3.6rem] gap-6">
+      <div className={`flex flex-col text-center px-7 py-[3.6rem] gap-6  ${reverse ? 'md:order-first' : ''}`}>
         <h2 className="text-[1.8rem] font-black leading-8">{title}</h2>
         <p className="font-[Barlow] text-dark-grayish-blue text-[.97rem] leading-[1.65rem]">{description}</p>
         <div>
@@ -22,6 +23,6 @@ export function TwoColsImageText({ title, description, imageUrlMobile, imageUrlD
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }

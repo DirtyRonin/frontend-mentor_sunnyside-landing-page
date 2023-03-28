@@ -1,15 +1,19 @@
+import { GetPublicUrl } from '../../utils/get-public-url';
+
 interface ImageColProps {
   imageUrlDesktop: string;
   imageUrlMobile: string;
   alt?: string;
+  mediaDesktop?: string;
+  mediaMobile?: string;
 }
 
-export function ImageCol({ imageUrlDesktop, imageUrlMobile, alt }: ImageColProps) {
+export function ImageCol({ imageUrlDesktop, imageUrlMobile, alt, mediaDesktop = '(min-width:768px)', mediaMobile = '(min-width:350px)' }: ImageColProps) {
   return (
     <picture>
-      <source media="(min-width:1040px)" srcSet={imageUrlDesktop} />
-      <source media="(min-width:350px)" srcSet={imageUrlMobile} />
-      <img src={imageUrlMobile} alt={alt || ''} />
+      <source media={mediaDesktop} srcSet={`${GetPublicUrl(imageUrlDesktop)}`} />
+      <source media={mediaMobile} srcSet={`${GetPublicUrl(imageUrlMobile)}`} />
+      <img src={`${GetPublicUrl(imageUrlMobile)}`} alt={alt || ''} />
     </picture>
   );
 }
