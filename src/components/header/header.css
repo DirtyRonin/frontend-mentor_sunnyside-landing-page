@@ -1,0 +1,6 @@
+.rectangle {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-right: 25px solid white;
+}

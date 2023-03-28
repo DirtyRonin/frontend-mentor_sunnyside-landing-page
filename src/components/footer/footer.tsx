@@ -3,9 +3,9 @@ import { ReactComponent as Facebook } from '../../project/images/icon-facebook.s
 import { ReactComponent as Instagram } from '../../project/images/icon-instagram.svg';
 import { ReactComponent as Pinterest } from '../../project/images/icon-pinterest.svg';
 import { ReactComponent as Twitter } from '../../project/images/icon-twitter.svg';
+import { menuOptions } from '../../models/menuOptions';
 
 export function Footer() {
-  const menuOptions = ['About', 'Services', 'Projects'] as const;
   const socialOptions = [<Facebook />, <Instagram />, <Twitter />, <Pinterest />] as const;
 
   return (

@@ -1,3 +1,4 @@
+import { menuOptions } from '../../models/menuOptions';
 import { ReactComponent as Logo } from '../../project/images/logo.svg';
 
 export function DesktopNavigation() {
@@ -7,15 +8,13 @@ export function DesktopNavigation() {
       <div className="flex gap-4">
         <div className="font-[Barlow]">
           <ul>
-            <li className="float-left py-3 px-5">
-              <a href="#">About</a>
-            </li>
-            <li className="float-left py-3 px-5">
-              <a href="#">Services</a>
-            </li>
-            <li className="float-left py-3 px-5">
-              <a href="#">Projects</a>
-            </li>
+            {menuOptions.map((x) => (
+              <li key={`desktop-navigation-${x}`} className="float-left py-3 px-5  ">
+                <a className="active:text-sky-200 " href="#">
+                  {x}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
         <button className="text-black bg-white px-6 rounded-[5rem] active:text-white active:bg-sky-300">

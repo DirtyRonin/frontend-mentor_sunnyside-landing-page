@@ -1,11 +1,17 @@
 import { ReactComponent as Logo } from '../../project/images/logo.svg';
 import { ReactComponent as Hamburger } from '../../project/images/icon-hamburger.svg';
 
-export function MobileNavigation() {
+interface MobileNavigationProps {
+  toggleMenu: () => void;
+}
+
+export function MobileNavigation({ toggleMenu: toggleMenu }: MobileNavigationProps) {
   return (
     <div className="flex justify-between">
       <Logo />
-      <Hamburger />
+      <button onClick={toggleMenu}>
+        <Hamburger />
+      </button>
     </div>
   );
 }
