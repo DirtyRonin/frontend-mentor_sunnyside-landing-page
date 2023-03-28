@@ -1,0 +1,1 @@
+export * from './one-col-image-text'

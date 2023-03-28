@@ -1,14 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import { Footer } from './components/footer';
+import { Header } from './components/header';
+import { LandingPage } from './pages/landing-page';
 function App() {
   return (
     <>
-      <header></header>
+      <header>
+        <Header />
+      </header>
       <nav></nav>
-      <main></main>
-      <footer></footer>
+      <main>
+        <LandingPage />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
