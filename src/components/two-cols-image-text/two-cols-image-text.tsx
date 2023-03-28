@@ -13,7 +13,9 @@ export function TwoColsImageText({ title, description, imageUrlMobile, imageUrlD
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 ">
       <ImageCol imageUrlDesktop={imageUrlDesktop} imageUrlMobile={imageUrlMobile} />
-      <div className={`flex flex-col text-center px-7 py-[3.6rem] gap-6  ${reverse ? 'md:order-first' : ''}`}>
+      <div
+        className={`flex flex-col text-center px-7 py-[3.6rem] gap-6 md:max-lg:py-[.5rem] md:max-lg:px-1 md:max-lg:gap-4 ${reverse ? 'md:order-first' : ''}`}
+      >
         <h2 className="text-[1.8rem] font-black leading-8">{title}</h2>
         <p className="font-[Barlow] text-dark-grayish-blue text-[.97rem] leading-[1.65rem]">{description}</p>
         <div>
