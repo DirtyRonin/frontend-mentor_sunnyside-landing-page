@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/frontend-mentor_sunnyside-landing-page/static/css/main.fcc1de86.css",
-    "main.js": "/frontend-mentor_sunnyside-landing-page/static/js/main.54430d39.js",
+    "main.css": "/frontend-mentor_sunnyside-landing-page/static/css/main.c45441f1.css",
+    "main.js": "/frontend-mentor_sunnyside-landing-page/static/js/main.ed55e303.js",
     "static/js/787.d488584d.chunk.js": "/frontend-mentor_sunnyside-landing-page/static/js/787.d488584d.chunk.js",
     "static/media/logo.svg": "/frontend-mentor_sunnyside-landing-page/static/media/logo.c75c2d7aebd74dbf59e08adb519226f0.svg",
     "static/media/icon-instagram.svg": "/frontend-mentor_sunnyside-landing-page/static/media/icon-instagram.a8235ef790d6956cb1f61ff22fded00e.svg",
@@ -11,12 +11,12 @@
     "static/media/icon-facebook.svg": "/frontend-mentor_sunnyside-landing-page/static/media/icon-facebook.4ebb292b8b77fa444ce51e5cf293356c.svg",
     "static/media/icon-arrow-down.svg": "/frontend-mentor_sunnyside-landing-page/static/media/icon-arrow-down.979ef07a7cbb07d35f05bbaa093f7489.svg",
     "static/media/icon-hamburger.svg": "/frontend-mentor_sunnyside-landing-page/static/media/icon-hamburger.7764b7eb6060edb45161f8b146f1373c.svg",
-    "main.fcc1de86.css.map": "/frontend-mentor_sunnyside-landing-page/static/css/main.fcc1de86.css.map",
-    "main.54430d39.js.map": "/frontend-mentor_sunnyside-landing-page/static/js/main.54430d39.js.map",
+    "main.c45441f1.css.map": "/frontend-mentor_sunnyside-landing-page/static/css/main.c45441f1.css.map",
+    "main.ed55e303.js.map": "/frontend-mentor_sunnyside-landing-page/static/js/main.ed55e303.js.map",
     "787.d488584d.chunk.js.map": "/frontend-mentor_sunnyside-landing-page/static/js/787.d488584d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fcc1de86.css",
-    "static/js/main.54430d39.js"
+    "static/css/main.c45441f1.css",
+    "static/js/main.ed55e303.js"
   ]
 }
