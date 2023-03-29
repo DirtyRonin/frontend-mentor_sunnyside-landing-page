@@ -10,7 +10,7 @@ interface TwoColsImageTextProps {
   reverse?: boolean;
 }
 
-export function TwoColsImageText({ title, description, imageUrlMobile, imageUrlDesktop, linkColor: linkColor, reverse = false }: TwoColsImageTextProps) {
+export function TwoColsImageText({ title, description, imageUrlMobile, imageUrlDesktop, linkColor, reverse = false }: TwoColsImageTextProps) {
   const [isActive, setActive] = React.useState(false);
 
   const getLinkColor = (color: 'yellow' | 'soft-red') => {
@@ -27,11 +27,17 @@ export function TwoColsImageText({ title, description, imageUrlMobile, imageUrlD
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 ">
       <ImageCol imageUrlDesktop={imageUrlDesktop} imageUrlMobile={imageUrlMobile} />
+
       <div
-        className={`flex flex-col text-center px-7 py-[3.6rem] gap-6 md:max-lg:py-[.5rem] md:max-lg:px-1 md:max-lg:gap-4 ${reverse ? 'md:order-first' : ''}`}
+        className={`flex flex-col text-center justify-center
+      px-7 py-[3.6rem] gap-6 
+      md:px-1 md:py-[.5rem] md:gap-4  
+      lg:px-4  
+      xl:pl-[9.2rem] xl:pr-[6rem] xl:text-left  xl:gap-8
+      ${reverse ? 'md:order-first' : ''}`}
       >
-        <h2 className="text-[1.8rem] font-black leading-8">{title}</h2>
-        <p className="font-[Barlow] text-dark-grayish-blue text-[.97rem] leading-[1.65rem]">{description}</p>
+        <h2 className="font-black text-[1.8rem] lg:text-[2.2rem] leading-8 lg:leading-[2.75rem]">{title}</h2>
+        <p className="font-[Barlow] text-dark-grayish-blue text-ellipsis text-[.97rem] lg:text-[.9825rem] leading-[1.65rem] ">{description}</p>
         <div>
           <button className="" onMouseDown={() => setActive(true)} onMouseUp={() => setActive(false)}>
             <p className="uppercase text-[.85rem] font-black px-2 letter tracking-widest z-[2000]">learn more</p>

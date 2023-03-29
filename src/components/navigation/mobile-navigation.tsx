@@ -5,7 +5,7 @@ interface MobileNavigationProps {
   toggleMenu: () => void;
 }
 
-export function MobileNavigation({ toggleMenu: toggleMenu }: MobileNavigationProps) {
+export function MobileNavigation({ toggleMenu }: MobileNavigationProps) {
   return (
     <div className="flex justify-between">
       <Logo />
